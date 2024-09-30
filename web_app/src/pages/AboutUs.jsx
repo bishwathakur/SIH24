@@ -8,6 +8,7 @@ const AboutUs = () => {
       avatar: './src/assets/Green.jpg',
       backdrop: './src/assets/bg-ml.jpeg',
       dept:'Computer Science and Engineering',
+      linkedin: 'https://www.linkedin.com/in/green-kedia', // Add LinkedIn URLs
     },
     {
       name: 'Bishwa Thakur',
@@ -15,6 +16,7 @@ const AboutUs = () => {
       avatar: './src/assets/Bishwa.jpg',
       backdrop: './src/assets/mern-stack.png',
       dept:'Civil Engineering',
+      linkedin: 'https://www.linkedin.com/in/bishwa-thakur/',
     },
     {
       name: 'Aditya Aryan',
@@ -22,6 +24,7 @@ const AboutUs = () => {
       avatar: './src/assets/Aditya.jpg',
       backdrop: './src/assets/mern-stack.png',
       dept:'Electrical Engineering',
+      linkedin: 'https://www.linkedin.com/in/aditya-aryan',
     },
     {
       name: 'Daksh Mor',
@@ -29,6 +32,7 @@ const AboutUs = () => {
       avatar: './src/assets/Daksh.jpg',
       backdrop: './src/assets/bg-ml.jpeg',
       dept:'Computer Science and Engineering',
+      linkedin: 'https://www.linkedin.com/in/daksh-mor',
     },
     {
       name: 'Nancy Srivastava',
@@ -36,6 +40,7 @@ const AboutUs = () => {
       avatar: './src/assets/Nancy.jpg',
       backdrop: './src/assets/bg-ml.jpeg',
       dept:'Electronics and Communication Engineering',
+      linkedin: 'https://www.linkedin.com/in/nancy-srivastava',
     },
     {
       name: 'Govind Gangele',
@@ -43,22 +48,24 @@ const AboutUs = () => {
       avatar: './src/assets/Govind.jpg',
       backdrop: './src/assets/react.png',
       dept:'Electrical Engineering',
+      linkedin: 'https://www.linkedin.com/in/govind-gangele',
     },
   ];
 
   return (
     <div
-      className="min-h-screen flex flex-wrap justify-center items-center pt-28" // Added padding-top for gap
+      className="min-h-screen flex flex-wrap justify-center items-center pt-28"
       style={{ backgroundColor: '#070808' }}
     >
       <div className="flex flex-wrap justify-center w-full max-w-6xl">
-        {/* Loop through profiles to generate the cards */}
         {profiles.map((profile, index) => (
-          <div
+          <a
             key={index}
+            href={profile.linkedin} // Open LinkedIn on click
+            target="_blank" // Open in a new tab
+            rel="noopener noreferrer" // For security
             className="relative flex flex-col justify-start h-[450px] w-[280px] m-4 overflow-hidden bg-black group transition-all duration-500"
             style={{
-              
               borderRadius: '10px',
               padding: '20px',
             }}
@@ -92,9 +99,8 @@ const AboutUs = () => {
                 Bachelor of technology-{profile.dept}
                 <p>IIT ISM Dhanbad</p>
               </p>
-              
             </div>
-          </div>
+          </a>
         ))}
       </div>
     </div>
