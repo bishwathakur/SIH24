@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import axios from 'axios';
+const apiurl ='https://sih24-8j8v.onrender.com/predict'; // Replace with your API endpoint
 
 const useOnScreen = (ref) => {
   const [isIntersecting, setIntersecting] = useState(false);
@@ -32,7 +33,7 @@ function FilePage() {
   const [showImages, setShowImages] = useState(false);
   const [loading, setLoading] = useState(false);
   const [images, setImages] = useState([]);
-  
+
   // Reference to the video element
   const videoRef = useRef(null);
 
@@ -47,7 +48,7 @@ function FilePage() {
     }
 
     setLoading(true);
-    
+
     // Play the video when the button is clicked
     if (videoRef.current) {
       videoRef.current.play();
@@ -57,7 +58,7 @@ function FilePage() {
     formData.append('file', file);
 
     try {
-      const response = await axios.post('http://127.0.0.1:5000/predict', formData, {
+      const response = await axios.post(apiurl, formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
 
@@ -109,7 +110,7 @@ function FilePage() {
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-custom-bg bg-cover bg-center bg-no-repeat py-20 px-6 text-white" style={{backgroundColor:'#070808'}}>
+    <div className="relative min-h-screen bg-custom-bg bg-cover bg-center bg-no-repeat py-20 px-6 text-white" style={{ backgroundColor: '#070808' }}>
       <video
         ref={videoRef}  // Reference to the video element
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
@@ -139,7 +140,7 @@ function FilePage() {
               {error && <p className="mt-4 text-red-500 text-center">{error}</p>}
               {prediction && !showAnimation && (
                 <p className="mt-4 text-center">It is a {prediction}...</p>
-              )} 
+              )}
             </div>
           </>
         ) : (
@@ -162,9 +163,8 @@ const ImageCard = ({ src, text }) => {
   return (
     <div
       ref={ref}
-      className={`transition-opacity transition-transform duration-500 ease-out flex items-center mb-12 p-8 rounded-xl bg-gray-900 shadow-2xl transform ${
-        onScreen ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[-100px]'
-      } hover:shadow-neon hover:scale-105`} // Added hover effects
+      className={`transition-opacity transition-transform duration-500 ease-out flex items-center mb-12 p-8 rounded-xl bg-gray-900 shadow-2xl transform ${onScreen ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[-100px]'
+        } hover:shadow-neon hover:scale-105`} // Added hover effects
       style={{ transition: 'transform 0.3s, box-shadow 0.3s' }} // Smooth transition for hover effects
     >
       <div className="w-1/2 mr-6">
