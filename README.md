@@ -28,6 +28,20 @@ This project leverages a diverse set of technologies to build a complete micro-D
 - **React.js**: Frontend framework used to build the web application.
 - **React Native**: Framework for building cross-platform mobile applications.
 
+## Screenshots
+- Website
+![s1](https://github.com/user-attachments/assets/dd58068d-276e-40d4-b2b0-60a5d8945d72)
+![s2](https://github.com/user-attachments/assets/748b1c90-71df-47a3-b2ff-c8911d24df70)
+![s3(!)](https://github.com/user-attachments/assets/9e9905a7-30d8-4d46-95fb-3b0c2ec133e1)
+
+- Mobile Application
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/5a5c06b3-2850-49f6-85d3-5ee387cb3e82" width="150"/>
+  <img src="https://github.com/user-attachments/assets/95365fef-9d1f-46dd-bc4b-595514832e70" width="150"/>
+  <img src="https://github.com/user-attachments/assets/be3eefa1-5ff8-427f-9738-cbab2999353b" width="150"/>
+  <img src="https://github.com/user-attachments/assets/5807e635-984f-4b10-8082-7265867e0ffb" width="150"/>
+  <img src="https://github.com/user-attachments/assets/2c612a4a-e8d8-45c5-b83c-b6d9d5d9af44" width="150"/>
+</p>
 ## Installation
 Follow the instructions below to set up each component of the system:
 
