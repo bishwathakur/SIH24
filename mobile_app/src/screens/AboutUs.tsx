@@ -3,12 +3,12 @@ import React from 'react';
 import { ScrollView } from 'react-native';
 
 // Import images from the assets folder
-const BishwaPhoto = require('../../assets/Bishwa.jpg');
-const GreenPhoto = require('../../assets/Green.jpg');
-const DakshPhoto = require('../../assets/Daksh.jpg');
-const AdityaPhoto = require('../../assets/Aditya.jpg');
-const GovindPhoto = require('../../assets/Govind.jpg');
-const NancyPhoto = require('../../assets/Nancy.jpg');
+const BishwaPhoto = require('../assets/Bishwa.jpg');
+const GreenPhoto = require('../assets/Green.jpg');
+const DakshPhoto = require('../assets/Daksh.jpg');
+const AdityaPhoto = require('../assets/Aditya.jpg');
+const GovindPhoto = require('../assets/Govind.jpg');
+const NancyPhoto = require('../assets/Nancy.jpg');
 
 const teamMembers = [
   { name: 'Bishwa Thakur', photo: BishwaPhoto },
