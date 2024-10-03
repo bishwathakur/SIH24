@@ -1,13 +1,13 @@
 // src/components/Home.jsx
 import React from 'react';
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
-
+import vid from '../assets/new.mp4'; // Import the video file
 const Home = () => {
   return (
     <div className="relative w-full h-screen overflow-hidden" style={{backgroundColor:'#070808'}}>
       <video 
         className="absolute top-0 left-0 w-full h-full object-cover"
-        src="../src/assets/new.mp4" 
+        src={vid} 
         autoPlay 
         loop 
         muted 

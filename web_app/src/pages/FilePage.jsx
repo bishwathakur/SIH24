@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import axios from 'axios';
-const apiurl ='https://sih24-8j8v.onrender.com/predict'; // Replace with your API endpoint
+const apiurl ='https://sih24-8j8v.onrender.com/predict'
+import video from '../../src/assets/radar.mp4';
 
 const useOnScreen = (ref) => {
   const [isIntersecting, setIntersecting] = useState(false);
@@ -114,7 +115,7 @@ function FilePage() {
       <video
         ref={videoRef}  // Reference to the video element
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
-        src="../src/assets/radar.mp4"
+        src={video}
         autoPlay
         muted
         loop
