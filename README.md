@@ -150,6 +150,3 @@ Contributions are welcome! If you would like to contribute to this project, plea
 5. Open a pull request.
 
 For major changes, please open an issue first to discuss what you would like to change.
-
-## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
