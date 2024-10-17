@@ -142,11 +142,5 @@ The mobile application is developed using React Native to support both iOS and A
 - **Data Management**: Implement a robust data pipeline to handle and preprocess large volumes of radar data efficiently.
 
 ## Contributing
-Contributions are welcome! If you would like to contribute to this project, please follow these steps:
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature/your-feature-name`).
-3. Commit your changes (`git commit -m 'Add some feature'`).
-4. Push to the branch (`git push origin feature/your-feature-name`).
-5. Open a pull request.
 
-For major changes, please open an issue first to discuss what you would like to change.
+For changes, please open an issue first to discuss what you would like to change.
