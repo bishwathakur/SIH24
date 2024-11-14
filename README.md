@@ -1,5 +1,6 @@
 
 # Micro-Doppler Classification System
+Invisible Eye is a cross-platform application built with React.js for web and React Native for mobile, enabling seamless monitoring and surveillance. The app allows users to view real-time data, track activity, and manage alerts across devices with efficient performance. It leverages React's component-based design to ensure a responsive and engaging user experience, and its integration with backend services supports robust data handling and secure operations.
 
 ## Table of Contents
 - [Project Title](#micro-doppler-classification-system)
