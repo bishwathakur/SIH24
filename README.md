@@ -54,11 +54,11 @@ Follow the instructions below to set up each component of the system:
 ### Backend Setup
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/username/micro-doppler-classification-system.git
+   git clone https://github.com/bishwatkur/SIH24.git
    ```
 2. **Navigate to the backend directory:**
    ```bash
-   cd micro-doppler-classification-system/backend
+   cd SIH24/backend
    ```
 3. **Create a virtual environment and activate it:**
    ```bash
