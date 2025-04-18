@@ -41,11 +41,17 @@ This project leverages a diverse set of technologies to build a complete micro-D
 
 - Mobile Application
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/5a5c06b3-2850-49f6-85d3-5ee387cb3e82" width="150"/>
-  <img src="https://github.com/user-attachments/assets/95365fef-9d1f-46dd-bc4b-595514832e70" width="150"/>
-  <img src="https://github.com/user-attachments/assets/be3eefa1-5ff8-427f-9738-cbab2999353b" width="150"/>
-  <img src="https://github.com/user-attachments/assets/5807e635-984f-4b10-8082-7265867e0ffb" width="150"/>
-  <img src="https://github.com/user-attachments/assets/2c612a4a-e8d8-45c5-b83c-b6d9d5d9af44" width="150"/>
+  <img src="https://github.com/user-attachments/assets/9d771b86-3dc9-4ef0-bf18-0a0f7c8a1603" width="230"/>
+  <img src="https://github.com/user-attachments/assets/47f4febb-1166-4d6b-a750-4babff95debd" width="230"/>
+  <img src="https://github.com/user-attachments/assets/6f241a8b-90f3-47bf-8a30-2460f2c4b102" width="230"/> 
+</p>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/e92b0f8c-98fa-4d89-888a-7dc19e15e4a8" width="230"/>
+  <img src="https://github.com/user-attachments/assets/bd6ff0cd-87a7-4426-9686-6a12edea58c8" width="230"/>
+</p>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/4e3cd048-0479-47c6-8b53-345cff0f1d6e" width="230"/>
+  <img src="https://github.com/user-attachments/assets/809fd523-1488-4964-80c2-6e30b540ac97" width="230"/>
 </p>
 
 ## Installation
