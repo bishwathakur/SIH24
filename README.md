@@ -7,6 +7,7 @@ Invisible Eye is a cross-platform application built with React.js for web and Re
 - [Table of Contents](#table-of-contents)
 - [Deployed Website Link](#deployed-website-link)
 - [Technologies Used](#technologies-used)
+- [Screenshots/Demo Videos](#screenshots)
 - [Installation](#installation)
   - [Backend Setup](#backend-setup)
   - [Web Application Setup](#web-application-setup)
@@ -33,11 +34,16 @@ This project leverages a diverse set of technologies to build a complete micro-D
 - **React.js**: Frontend framework used to build the web application.
 - **React Native**: Framework for building cross-platform mobile applications.
 
-# Screenshots
-- ## 💻 Website
-![s1](https://github.com/user-attachments/assets/dd58068d-276e-40d4-b2b0-60a5d8945d72)
-![s2](https://github.com/user-attachments/assets/748b1c90-71df-47a3-b2ff-c8911d24df70)
-![s3(!)](https://github.com/user-attachments/assets/9e9905a7-30d8-4d46-95fb-3b0c2ec133e1)
+## Screenshots
+## 💻 Website
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/dd58068d-276e-40d4-b2b0-60a5d8945d72" width="340"/>
+  <img src="https://github.com/user-attachments/assets/748b1c90-71df-47a3-b2ff-c8911d24df70" width="340"/>
+</p>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/9e9905a7-30d8-4d46-95fb-3b0c2ec133e1" width="340"/>
+</p>
+
 
 - ## 📱 App Preview
 <p align="center">
