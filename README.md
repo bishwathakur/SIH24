@@ -1,9 +1,11 @@
 
 # Micro-Doppler Classification System
+Invisible Eye is a cross-platform application built with React.js for web and React Native for mobile, enabling seamless monitoring and surveillance. The app allows users to view real-time data, track activity, and manage alerts across devices with efficient performance. It leverages React's component-based design to ensure a responsive and engaging user experience, and its integration with backend services supports robust data handling and secure operations.
 
 ## Table of Contents
 - [Project Title](#micro-doppler-classification-system)
 - [Table of Contents](#table-of-contents)
+- [Deployed Website Link](#deployed-website-link)
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
   - [Backend Setup](#backend-setup)
@@ -17,6 +19,9 @@
 - [Overcoming Strategies](#overcoming-strategies)
 - [Contributing](#contributing)
 - [License](#license)
+
+## Deployed Website Link
+Access the deployed web application at [birddroneclassifier.netlify.app](https://birddroneclassifier.netlify.app)
 
 ## Technologies Used
 This project leverages a diverse set of technologies to build a complete micro-Doppler classification system:
@@ -42,17 +47,18 @@ This project leverages a diverse set of technologies to build a complete micro-D
   <img src="https://github.com/user-attachments/assets/5807e635-984f-4b10-8082-7265867e0ffb" width="150"/>
   <img src="https://github.com/user-attachments/assets/2c612a4a-e8d8-45c5-b83c-b6d9d5d9af44" width="150"/>
 </p>
+
 ## Installation
 Follow the instructions below to set up each component of the system:
 
 ### Backend Setup
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/username/micro-doppler-classification-system.git
+   git clone https://github.com/bishwatkur/SIH24.git
    ```
 2. **Navigate to the backend directory:**
    ```bash
-   cd micro-doppler-classification-system/backend
+   cd SIH24/backend
    ```
 3. **Create a virtual environment and activate it:**
    ```bash
@@ -137,14 +143,5 @@ The mobile application is developed using React Native to support both iOS and A
 - **Data Management**: Implement a robust data pipeline to handle and preprocess large volumes of radar data efficiently.
 
 ## Contributing
-Contributions are welcome! If you would like to contribute to this project, please follow these steps:
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature/your-feature-name`).
-3. Commit your changes (`git commit -m 'Add some feature'`).
-4. Push to the branch (`git push origin feature/your-feature-name`).
-5. Open a pull request.
 
-For major changes, please open an issue first to discuss what you would like to change.
-
-## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+For changes, please open an issue first to discuss what you would like to change.
