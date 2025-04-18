@@ -33,13 +33,13 @@ This project leverages a diverse set of technologies to build a complete micro-D
 - **React.js**: Frontend framework used to build the web application.
 - **React Native**: Framework for building cross-platform mobile applications.
 
-## Screenshots
-- Website
+# Screenshots
+- ## 💻 Website
 ![s1](https://github.com/user-attachments/assets/dd58068d-276e-40d4-b2b0-60a5d8945d72)
 ![s2](https://github.com/user-attachments/assets/748b1c90-71df-47a3-b2ff-c8911d24df70)
 ![s3(!)](https://github.com/user-attachments/assets/9e9905a7-30d8-4d46-95fb-3b0c2ec133e1)
 
-- Mobile Application
+- ## 📱 App Preview
 <p align="center">
   <img src="https://github.com/user-attachments/assets/9d771b86-3dc9-4ef0-bf18-0a0f7c8a1603" width="230"/>
   <img src="https://github.com/user-attachments/assets/47f4febb-1166-4d6b-a750-4babff95debd" width="230"/>
@@ -53,6 +53,10 @@ This project leverages a diverse set of technologies to build a complete micro-D
   <img src="https://github.com/user-attachments/assets/4e3cd048-0479-47c6-8b53-345cff0f1d6e" width="230"/>
   <img src="https://github.com/user-attachments/assets/809fd523-1488-4964-80c2-6e30b540ac97" width="230"/>
 </p>
+
+### 🎥 App Demo
+
+[![Watch the video](https://github.com/user-attachments/assets/c02eea7d-6e03-4968-882d-177cc28f890c)](https://github.com/user-attachments/assets/c02eea7d-6e03-4968-882d-177cc28f890c)
 
 ## Installation
 Follow the instructions below to set up each component of the system:
