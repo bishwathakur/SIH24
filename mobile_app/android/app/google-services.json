@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "568484869670",
-    "project_id": "salonapp-146b0",
-    "storage_bucket": "salonapp-146b0.appspot.com"
+    "project_number": "624820579657",
+    "project_id": "sih24-5cdc6",
+    "storage_bucket": "sih24-5cdc6.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:568484869670:android:6e662c12a221b1b04358e7",
+        "mobilesdk_app_id": "1:624820579657:android:3d2068e49def90a7cc7e98",
         "android_client_info": {
           "package_name": "com.salon_app"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCq4jyp7Kzq3ajUeRfgk20G7wYHey2-n78"
+          "current_key": "AIzaSyCQdg-v4aCOUO3yCHDBBCV9gv2fCwXIWcc"
         }
       ],
       "services": {

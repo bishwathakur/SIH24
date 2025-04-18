@@ -1,18 +1,38 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import { StyleSheet, View, Text, Image, BackHandler, Alert } from 'react-native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import { View, Text, StyleSheet, BackHandler, Alert } from 'react-native';
+import { useEffect } from 'react';
+import { DrawerContentScrollView, DrawerItemList, DrawerItem } from '@react-navigation/drawer';
+import { Linking } from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
-// Import your screen components
-import MainScreen from './MainScreen';
-import AboutUs from './AboutUs';
+// Import screens
+import MainScreen from '../screens/MainScreen';
+import AboutUs from '../screens/AboutUs';
 
-// Define the param list for type checking
-type RootDrawerParamList = {
-  MainScreen: undefined;
-  AboutUs: undefined;
+const Drawer = createDrawerNavigator();
+
+// Custom drawer content
+const CustomDrawerContent = (props) => {
+  return (
+    <DrawerContentScrollView {...props} style={styles.drawerContent}>
+      <View style={styles.drawerHeader}>
+        {/* <Image 
+          source={require('../assets/logo.png')} 
+          style={styles.drawerLogo} 
+          resizeMode="contain"
+        /> */}
+        <Text style={styles.drawerTitle}>INVISIBLE EYE</Text>
+      </View>
+      
+      <DrawerItemList {...props} />
+      
+      <View style={styles.drawerFooter}>
+        <Text style={styles.footerText}>v1.0.0</Text>
+      </View>
+    </DrawerContentScrollView>
+  );
 };
-
-const Drawer = createDrawerNavigator<RootDrawerParamList>();
 
 const DrawerNavigator = () => {
   useEffect(() => {
@@ -20,62 +40,103 @@ const DrawerNavigator = () => {
       Alert.alert('Exit App', 'Do you want to exit the app?', [
         {
           text: 'Cancel',
-          onPress: () => null, // Do nothing and stay in the app
+          onPress: () => null,
           style: 'cancel',
         },
         {
           text: 'Yes',
-          onPress: () => BackHandler.exitApp(), // Exit the app
+          onPress: () => BackHandler.exitApp(),
         },
       ]);
-      return true; // Prevent default back behavior
+      return true;
     };
 
     const backHandler = BackHandler.addEventListener('hardwareBackPress', backAction);
-
-    // Cleanup the event listener on component unmount
     return () => backHandler.remove();
   }, []);
 
   return (
     <Drawer.Navigator
-      initialRouteName="MainScreen"
+      drawerContent={(props) => <CustomDrawerContent {...props} />}
       screenOptions={{
         drawerStyle: {
-          backgroundColor: '#212529', // Background color of the drawer
+          backgroundColor: '#1E1E1E',
+          width: 280,
         },
-        drawerActiveTintColor: '#39FF14', // Color of the active item
-        drawerInactiveTintColor: 'white', // Color of the inactive items
+        drawerActiveTintColor: '#39FF14',
+        drawerInactiveTintColor: '#FFFFFF',
         drawerLabelStyle: {
           fontSize: 16,
+          marginLeft: -20,
         },
         headerStyle: {
-          backgroundColor: '#000000', // Top header color
+          backgroundColor: '#121212',
+          elevation: 0,
+          shadowOpacity: 0,
         },
-        headerTintColor: 'white', // Top header text color
+        headerTintColor: '#FFFFFF',
         headerTitleStyle: {
           fontWeight: 'bold',
         },
       }}
     >
-      <Drawer.Screen
-        name="MainScreen"
-        component={MainScreen}
-        options={{ drawerLabel: 'Home' }}
+      <Drawer.Screen 
+        name="MainScreen" 
+        component={MainScreen} 
+        options={{
+          title: 'Home',
+          drawerIcon: ({color}) => (
+            <Icon name="home" size={24} color={color} />
+          ),
+        }}
       />
-      <Drawer.Screen
-        name="AboutUs"
-        component={AboutUs}
-        options={{ drawerLabel: 'About Us' }}
+      <Drawer.Screen 
+        name="AboutUs" 
+        component={AboutUs} 
+        options={{
+          title: 'About Us',
+          drawerIcon: ({color}) => (
+            <Icon name="account-group" size={24} color={color} />
+          ),
+        }}
       />
     </Drawer.Navigator>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
+  drawerContent: {
+    backgroundColor: '#1E1E1E',
   },
+  drawerHeader: {
+    padding: 20,
+    alignItems: 'center',
+    borderBottomWidth: 1,
+    borderBottomColor: '#333333',
+    marginBottom: 10,
+  },
+  drawerLogo: {
+    width: 80,
+    height: 80,
+    marginBottom: 10,
+  },
+  drawerTitle: {
+    color: '#39FF14',
+    fontSize: 18,
+    fontWeight: 'bold',
+    letterSpacing: 1,
+  },
+  drawerFooter: {
+    padding: 20,
+    borderTopWidth: 1,
+    borderTopColor: '#333333',
+    marginTop: 20,
+  },
+  footerText: {
+    color: '#999999',
+    fontSize: 12,
+    textAlign: 'center',
+  }
 });
 
 export default DrawerNavigator;

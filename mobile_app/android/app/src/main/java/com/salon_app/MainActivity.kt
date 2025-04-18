@@ -18,7 +18,7 @@ class MainActivity : ReactActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(null)
   }
-  override fun getMainComponentName(): String = "Salon_App"
+  override fun getMainComponentName(): String = "salon_app"
 
   /**
    * Returns the instance of the [ReactActivityDelegate]. We use [DefaultReactActivityDelegate]

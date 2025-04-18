@@ -1,71 +1,188 @@
-import { StyleSheet, Text, View, Image } from 'react-native';
 import React from 'react';
-import { ScrollView } from 'react-native';
+import { 
+  StyleSheet, 
+  Text, 
+  View, 
+  Image, 
+  ScrollView, 
+  TouchableOpacity, 
+  Linking 
+} from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
-// Import images from the assets folder
-const BishwaPhoto = require('../assets/Bishwa.jpg');
-const GreenPhoto = require('../assets/Green.jpg');
-const DakshPhoto = require('../assets/Daksh.jpg');
-const AdityaPhoto = require('../assets/Aditya.jpg');
-const GovindPhoto = require('../assets/Govind.jpg');
-const NancyPhoto = require('../assets/Nancy.jpg');
-
+// Team member data
 const teamMembers = [
-  { name: 'Bishwa Thakur', photo: BishwaPhoto },
-  { name: 'Green Kedia', photo: GreenPhoto },
-  { name: 'Daksh Mor', photo: DakshPhoto },
-  { name: 'Aditya Aryan', photo: AdityaPhoto },
-  { name: 'Govind', photo: GovindPhoto },
-  { name: 'Nancy Srivastava', photo: NancyPhoto },
+  { 
+    name: 'Bishwa Thakur', 
+    photo: require('../assets/Bishwa.jpg'),
+    role: 'Full Stack Mobile App Developer',
+    linkedin: 'https://linkedin.com/in/bishwa-thakur'
+  },
+  { 
+    name: 'Daksh Mor', 
+    photo: require('../assets/Daksh.jpg'),
+    role: 'ML Engineer',
+    linkedin: 'https://www.linkedin.com/in/daksh-mor/'
+  },
+  { 
+    name: 'Aditya Aryan', 
+    photo: require('../assets/Aditya.jpg'),
+    role: 'Full Stack Web Developer',
+    linkedin: 'https://www.linkedin.com/in/aditya-aryan-63b621288/'
+  },
+  { 
+    name: 'Govind', 
+    photo: require('../assets/Govind.jpg'),
+    role: 'Frontend Developer',
+    linkedin: 'https://www.linkedin.com/in/govind-gangele-5537b7287/'
+  },
+  { 
+    name: 'Nancy Srivastava', 
+    photo: require('../assets/Nancy.jpg'),
+    role: 'ML Engineer',
+    linkedin: 'https://www.linkedin.com/in/nancy-srivastava-2k05/'
+  },
+  {
+    name:'Green Kedia',
+    photo:require('../assets/Green.jpg'),
+    role:'ML Engineer',
+    linkedin: 'https://www.linkedin.com/in/green-kedia/'
+  }
 ];
 
 const AboutUs = () => {
+  const openLinkedIn = (url) => {
+    Linking.openURL(url).catch((err) => console.error('Error opening LinkedIn:', err));
+  };
+
   return (
-    <ScrollView contentContainerStyle={styles.container}>
-      {teamMembers.map((member, index) => (
-        <View key={index} style={styles.card}>
-          <Image source={member.photo} style={styles.photo} />
-          <Text style={styles.name}>{member.name}</Text>
-        </View>
-      ))}
-    </ScrollView>
+    <View style={styles.container}>
+      <View style={styles.header}>
+        <Text style={styles.headerTitle}>Our Team</Text>
+        <Text style={styles.headerSubtitle}>
+          Meet the talented individuals behind Invisible Eye
+        </Text>
+      </View>
+
+      <ScrollView contentContainerStyle={styles.teamContainer}>
+        {teamMembers.map((member, index) => (
+          <TouchableOpacity 
+            key={index} 
+            style={styles.card}
+            onPress={() => openLinkedIn(member.linkedin)}
+            activeOpacity={0.9}
+          >
+            <View style={styles.photoContainer}>
+              <Image source={member.photo} style={styles.photo} />
+            </View>
+            <View style={styles.infoContainer}>
+              <Text style={styles.name}>{member.name}</Text>
+              <Text style={styles.role}>{member.role}</Text>
+              <View style={styles.linkedinButton}>
+                <Icon name="linkedin" size={16} color="#FFFFFF" />
+                <Text style={styles.linkedinText}>View Profile</Text>
+              </View>
+            </View>
+          </TouchableOpacity>
+        ))}
+      </ScrollView>
+
+      <View style={styles.footer}>
+        <Text style={styles.footerText}>
+          © 2023 Invisible Eye. All rights reserved.
+        </Text>
+      </View>
+    </View>
   );
 };
 
-export default AboutUs;
-
 const styles = StyleSheet.create({
   container: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
+    flex: 1,
+    backgroundColor: '#121212',
+  },
+  header: {
     padding: 20,
-    backgroundColor: '#212529',
+    alignItems: 'center',
+    borderBottomWidth: 1,
+    borderBottomColor: '#333333',
+  },
+  headerTitle: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#39FF14',
+    marginBottom: 5,
+  },
+  headerSubtitle: {
+    fontSize: 14,
+    color: '#CCCCCC',
+    textAlign: 'center',
+  },
+  teamContainer: {
+    padding: 15,
   },
   card: {
-    alignItems: 'center',
-    margin: 10,
-    padding: 15,
-    borderRadius: 10,
-    backgroundColor: '#39FF14',
+    backgroundColor: '#1E1E1E',
+    borderRadius: 15,
+    marginBottom: 20,
+    overflow: 'hidden',
+    flexDirection: 'row',
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.8,
-    shadowRadius: 2,
+    shadowOpacity: 0.3,
+    shadowRadius: 4,
     elevation: 5,
-    width: 200,
+  },
+  photoContainer: {
+    padding: 15,
   },
   photo: {
-    width: 140,
-    height: 140,
-    borderRadius: 70,
-    marginBottom: 10,
-    borderColor: '#FFFFFF',
+    width: 80,
+    height: 80,
+    borderRadius: 40,
     borderWidth: 2,
+    borderColor: '#39FF14',
+  },
+  infoContainer: {
+    flex: 1,
+    padding: 15,
+    justifyContent: 'center',
   },
   name: {
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: 'bold',
-    color: '#212529',
+    color: '#FFFFFF',
+    marginBottom: 5,
+  },
+  role: {
+    fontSize: 14,
+    color: '#CCCCCC',
+    marginBottom: 10,
+  },
+  linkedinButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: 'rgba(57, 255, 20, 0.2)',
+    paddingVertical: 5,
+    paddingHorizontal: 10,
+    borderRadius: 15,
+    alignSelf: 'flex-start',
+  },
+  linkedinText: {
+    color: '#FFFFFF',
+    fontSize: 12,
+    marginLeft: 5,
+  },
+  footer: {
+    padding: 15,
+    borderTopWidth: 1,
+    borderTopColor: '#333333',
+    alignItems: 'center',
+  },
+  footerText: {
+    color: '#999999',
+    fontSize: 12,
   },
 });
+
+export default AboutUs;
