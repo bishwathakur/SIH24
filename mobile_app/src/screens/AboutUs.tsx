@@ -89,7 +89,7 @@ const AboutUs = () => {
 
       <View style={styles.footer}>
         <Text style={styles.footerText}>
-          © 2023 Invisible Eye. All rights reserved.
+          © 2024 Invisible Eye. All rights reserved.
         </Text>
       </View>
     </View>
